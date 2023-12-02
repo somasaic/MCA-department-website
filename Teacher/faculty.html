@@ -1,0 +1,595 @@
+<html>
+<head>
+<style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+  background-color:lightseagreen;
+  color: white ;
+}
+
+th,td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.head {
+  background-color: #F4A460;
+}
+
+tr:hover {
+  background-color: coral;
+}
+
+.button {
+  background-color: lightseagreen;
+  border: none;
+  color: white;
+  padding: 5px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button {
+  background-color: lightseagreen; 
+  color: white; 
+}
+
+.button:hover {
+  background-color: coral;
+  color: white;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 5;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.6);
+ 
+}
+
+.modal-content {
+  position: absolute;
+  top: 50px;
+  right: 1150px;
+  width: 200px;
+  height: 100px;
+}
+
+.close {
+  color: white;
+  float: left;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+</style>
+</head>
+<body>
+
+<table>
+  <tr class="head">
+    <th>S.No</th>
+    <th>Name of the Faculty</th>
+    <th>Designation</th>
+    <th>Qualifcation</th>
+	<th>More Details</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>Dr. S. V. S. Ganga Devi</td>
+    <td>Professor</td>
+    <td>Ph.D. (SPMVV, Tirupathi)</td>
+	<td><button id="myBtn" class="button">View More</button>
+        <div id="myModal" class="modal">
+           <div class="modal-content">
+             <span class="close">&times;</span>
+             <img src="..\Teacher\images\ganga.png" alt="ganga" width="1200" height="400">
+           </div>
+        </div>
+    </td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Dr. N. Naveen Kumar</td>
+    <td>Assoc. Professor & HeAsst. Professor</td>
+    <td>Ph.D. (S V University, Tirupathi)</td>
+	<td><button id="myBtn1" class="button">View More</button>
+        <div id="myModal" class="modal">
+           <div class="modal-content">
+             <span class="close">&times;</span>
+             <img src="..\Teacher\images\ganga.png" alt="ganga" width="1200" height="400">
+           </div>
+        </div>
+    </td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>Dr. V Srinivasan</td>
+    <td>Asst. Professor</td>
+    <td>Ph.D. (Anna University)</td>
+	<td><button id="myBtn2" class="button">View More</button>
+        <div id="myModal" class="modal">
+           <div class="modal-content">
+             <span class="close">&times;</span>
+             <img src="..\Teacher\images\ganga.png" alt="ganga" width="1200" height="400">
+           </div>
+        </div>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>Dr. S. Jansi</td>
+    <td>Asst. Professor</td>
+    <td>Ph.D. (Avinashilingam University for Women, Coimbatore)</td>
+	<td><button id="myBtn3" class="button">View More</button>
+        <div id="myModal" class="modal">
+           <div class="modal-content">
+             <span class="close">&times;</span>
+             <img src="..\Teacher\images\ganga.png" alt="ganga" width="1200" height="400">
+           </div>
+        </div>
+    </td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>Dr. M. Saravanamuthu</td>
+    <td>Asst. Professor</td>
+    <td>Ph.D. (Anna University)</td>
+	<td><button id="myBtn4" class="button">View More</button>
+        <div id="myModal" class="modal">
+           <div class="modal-content">
+             <span class="close">&times;</span>
+             <img src="..\Teacher\images\ganga.png" alt="ganga" width="1200" height="400">
+           </div>
+        </div>
+    </td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>Dr. Syed Siraj Ahmed N</td>
+    <td>Asst. Professor</td>
+    <td>Ph.D. (VIT University)</td>
+	<td><button id="myBtn5" class="button">View More</button>
+        <div id="myModal" class="modal">
+           <div class="modal-content">
+             <span class="close">&times;</span>
+             <img src="..\Teacher\images\ganga.png" alt="ganga" width="1200" height="400">
+           </div>
+        </div>
+    </td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>Dr. Sivaraj C</td>
+    <td>Asst. Professor</td>
+    <td>Ph.D. (NIT, Tiruchirappalli)</td>
+	<td><button id="myBtn6" class="button">View More</button>
+        <div id="myModal" class="modal">
+           <div class="modal-content">
+             <span class="close">&times;</span>
+             <img src="..\Teacher\images\ganga.png" alt="ganga" width="1200" height="400">
+           </div>
+        </div>
+    </td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>Dr. A. Manimaran</td>
+    <td>Asst. Professor</td>
+    <td>Ph.D. (Bharathidasan University)</td>
+	<td><button id="myBtn7" class="button">View More</button>
+        <div id="myModal" class="modal">
+           <div class="modal-content">
+             <span class="close">&times;</span>
+             <img src="..\Teacher\images\ganga.png" alt="ganga" width="1200" height="400">
+           </div>
+        </div>
+    </td>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td>Dr. R. Maruthamuthu</td>
+    <td>Asst. Professor</td>
+    <td>Ph.D. (Anna University, Chennai)</td>
+	<td><button id="myBtn8" class="button">View More</button>
+        <div id="myModal" class="modal">
+           <div class="modal-content">
+             <span class="close">&times;</span>
+             <img src="..\Teacher\images\ganga.png" alt="ganga" width="1200" height="400">
+           </div>
+        </div>
+    </td>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>Dr. K. Hemalatha</td>
+    <td>Asst. Professor</td>
+    <td>Ph.D. (SPMVV, Tirupathi)</td>
+	<td><button id="myBtn9" class="button">View More</button>
+        <div id="myModal" class="modal">
+           <div class="modal-content">
+             <span class="close">&times;</span>
+             <img src="..\Teacher\images\ganga.png" alt="ganga" width="1200" height="400">
+           </div>
+        </div>
+    </td>
+  </tr>
+  <tr>
+    <td>11</td>
+    <td>Dr. Saqib Qamar</td>
+    <td>Asst. Professor</td>
+    <td>Ph.D. (Huazhong University, China)</td>
+	<td><button id="myBtn10" class="button">View More</button>
+        <div id="myModal" class="modal">
+           <div class="modal-content">
+             <span class="close">&times;</span>
+             <img src="..\Teacher\images\ganga.png" alt="ganga" width="1200" height="400">
+           </div>
+        </div>
+    </td>
+  </tr>
+  <tr>
+    <td>12</td>
+    <td>Dr. A. Althaf Ali</td>
+    <td>Asst. Professor</td>
+    <td>Ph.D. (Bharathiar University)</td>
+	<td><button id="myBtn11" class="button">View More</button>
+        <div id="myModal" class="modal">
+           <div class="modal-content">
+             <span class="close">&times;</span>
+             <img src="..\Teacher\images\ganga.png" alt="ganga" width="1200" height="400">
+           </div>
+        </div>
+    </td>
+  </tr>
+  <tr>
+    <td>13</td>
+    <td>Dr. Srinivasan Jagannathan</td>
+    <td>Asst. Professor</td>
+    <td>Ph.D. (Bharathiar University)</td>
+	<td><button id="myBtn12" class="button">View More</button>
+        <div id="myModal" class="modal">
+           <div class="modal-content">
+             <span class="close">&times;</span>
+             <img src="..\Teacher\images\ganga.png" alt="ganga" width="1200" height="400">
+           </div>
+        </div>
+    </td>
+  </tr>
+  <tr>
+    <td>14</td>
+    <td>Mr. Saravanan Thirunavukarasu</td>
+    <td>Asst. Professor</td>
+    <td>M.C.A, (Pursuing Ph.D. in Anna University, Chennai)</td>
+	<td><button id="myBtn13" class="button">View More</button>
+        <div id="myModal" class="modal">
+           <div class="modal-content">
+             <span class="close">&times;</span>
+             <img src="..\Teacher\images\ganga.png" alt="ganga" width="1200" height="400">
+           </div>
+        </div>
+    </td>
+  </tr>
+  <tr>
+    <td>15</td>
+    <td>Ms. Theepalakshmi P </td>
+    <td>Asst. Professor</td>
+    <td>MS in IT, (Pursuing Ph.D. in NIT,Tiruchirappalli)</td>
+	<td><button id="myBtn14" class="button">View More</button>
+        <div id="myModal" class="modal">
+           <div class="modal-content">
+             <span class="close">&times;</span>
+             <img src="..\Teacher\images\ganga.png" alt="ganga" width="1200" height="400">
+           </div>
+        </div>
+    </td>
+  </tr>
+  <tr>
+    <td>16</td>
+    <td>Ms. Afruza Begum</td>
+    <td>Asst. Professor</td>
+    <td>M.Tech., (Pursuing Ph.D. in NERIST, Arunachal PrAsst. Professoresh)</td>
+	<td><button id="myBtn15" class="button">View More</button>
+        <div id="myModal" class="modal">
+           <div class="modal-content">
+             <span class="close">&times;</span>
+             <img src="..\Teacher\images\ganga.png" alt="ganga" width="1200" height="400">
+           </div>
+        </div>
+    </td>
+  </tr>
+  <tr>
+    <td>17</td>
+    <td>Mr. S. Balamurugan  </td>
+    <td>Asst. Professor</td>
+    <td>M.Tech., (pursuing Ph.D. in Annamalai University)</td>
+	<td><button id="myBtn16" class="button">View More</button>
+        <div id="myModal" class="modal">
+           <div class="modal-content">
+             <span class="close">&times;</span>
+             <img src="..\Teacher\images\ganga.png" alt="ganga" width="1200" height="400">
+           </div>
+        </div>
+    </td>
+  </tr>
+  <tr>
+    <td>18</td>
+    <td>Mr. B. ChakrAsst. Professorhar</td>
+    <td>Asst. Professor</td>
+    <td>M.C.A.</td>
+	<td><button id="myBtn17" class="button">View More</button>
+        <div id="myModal" class="modal">
+           <div class="modal-content">
+             <span class="close">&times;</span>
+             <img src="..\Teacher\images\ganga.png" alt="ganga" width="1200" height="400">
+           </div>
+        </div>
+    </td>
+  </tr>
+  <tr>
+    <td>19</td>
+    <td>Mrs. A. R. Pavani</td>
+    <td>Asst. Professor</td>
+    <td>M.C.A.</td>
+	<td><button id="myBtn18" class="button">View More</button>
+        <div id="myModal" class="modal">
+           <div class="modal-content">
+             <span class="close">&times;</span>
+             <img src="..\Teacher\images\ganga.png" alt="ganga" width="1200" height="400">
+           </div>
+        </div>
+    </td>
+  </tr>
+  <tr>
+    <td>20</td>
+    <td>Mr. B.A.Mohammed Yacoob</td>
+    <td>Asst. Professor</td>
+    <td>M.C.A.</td>
+	<td><button id="myBtn19" class="button">View More</button>
+        <div id="myModal" class="modal">
+           <div class="modal-content">
+             <span class="close">&times;</span>
+             <img src="..\Teacher\images\ganga.png" alt="ganga" width="1200" height="400">
+           </div>
+        </div>
+    </td>
+  </tr>
+  <tr>
+    <td>21</td>
+    <td>Mr. M. Jaya Chandra</td>
+    <td>Asst. Professor</td>
+    <td>M.C.A.</td>
+	<td><button id="myBtn20" class="button">View More</button>
+        <div id="myModal" class="modal">
+           <div class="modal-content">
+             <span class="close">&times;</span>
+             <img src="..\Teacher\images\ganga.png" alt="ganga" width="1200" height="400">
+           </div>
+        </div>
+    </td>
+  </tr>
+  <tr>
+    <td>22</td>
+    <td>Mr. A. Subramaneswara Rao </td>
+    <td>Asst. Professor</td>
+    <td>M.Tech.</td>
+	<td><button id="myBtn21" class="button">View More</button>
+        <div id="myModal" class="modal">
+           <div class="modal-content">
+             <span class="close">&times;</span>
+             <img src="..\Teacher\images\ganga.png" alt="ganga" width="1200" height="400">
+           </div>
+        </div>
+    </td>
+  </tr>
+  <tr>
+    <td>23</td>
+    <td>Mr. P. Hanok</td>
+    <td>Asst. Professor</td>
+    <td>M.C.A.</td>
+	<td><button id="myBtn22" class="button">View More</button>
+        <div id="myModal" class="modal">
+           <div class="modal-content">
+             <span class="close">&times;</span>
+             <img src="..\Teacher\images\ganga.png" alt="ganga" width="1200" height="400">
+           </div>
+        </div>
+    </td>
+  </tr>
+  <tr>
+    <td>24</td>
+    <td>Mr. S. Suresh</td>
+    <td>Asst. Professor</td>
+    <td>M.C.A.</td>
+	<td><button id="myBtn23" class="button">View More</button>
+        <div id="myModal" class="modal">
+           <div class="modal-content">
+             <span class="close">&times;</span>
+             <img src="..\Teacher\images\ganga.png" alt="ganga" width="1200" height="400">
+           </div>
+        </div>
+    </td>
+  </tr>
+  <tr>
+    <td>25</td>
+    <td>Mr. G. R. Hemanth Kumar</td>
+    <td>Asst. Professor</td>
+    <td>M.Tech.</td>
+	<td><button id="myBtn24" class="button">View More</button>
+        <div id="myModal" class="modal">
+           <div class="modal-content">
+             <span class="close">&times;</span>
+             <img src="..\Teacher\images\ganga.png" alt="ganga" width="1000" height="300">
+           </div>
+        </div>
+    </td>
+  </tr>
+  
+  
+</table>
+<script>
+
+var modal = document.getElementById("myModal");
+
+var btn = document.getElementById("myBtn");
+var btn1 = document.getElementById("myBtn1");
+var btn2 = document.getElementById("myBtn2");
+var btn3 = document.getElementById("myBtn3");
+var btn4 = document.getElementById("myBtn4");
+var btn5 = document.getElementById("myBtn5");
+var btn6 = document.getElementById("myBtn6");
+var btn7 = document.getElementById("myBtn7");
+var btn8 = document.getElementById("myBtn");
+var btn9 = document.getElementById("myBtn");
+var btn10 = document.getElementById("myBtn");
+var btn11 = document.getElementById("myBtn");
+var btn12 = document.getElementById("myBtn");
+var btn13 = document.getElementById("myBtn");
+var btn14 = document.getElementById("myBtn");
+var btn15 = document.getElementById("myBtn");
+var btn16 = document.getElementById("myBtn");
+var btn17 = document.getElementById("myBtn");
+var btn18 = document.getElementById("myBtn");
+var btn19 = document.getElementById("myBtn");
+var btn20 = document.getElementById("myBtn");
+var btn21 = document.getElementById("myBtn");
+var btn22 = document.getElementById("myBtn");
+var btn23 = document.getElementById("myBtn");
+var btn24 = document.getElementById("myBtn");
+
+var span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+btn1.onclick = function() {
+  modal.style.display = "block";
+}
+
+btn2.onclick = function() {
+  modal.style.display = "block";
+}
+
+btn3.onclick = function() {
+  modal.style.display = "block";
+}
+
+btn4.onclick = function() {
+  modal.style.display = "block";
+}
+
+btn5.onclick = function() {
+  modal.style.display = "block";
+}
+
+btn6.onclick = function() {
+  modal.style.display = "block";
+}
+
+btn7.onclick = function() {
+  modal.style.display = "block";
+}
+
+btn8.onclick = function() {
+  modal.style.display = "block";
+}
+
+btn9.onclick = function() {
+  modal.style.display = "block";
+}
+
+btn10.onclick = function() {
+  modal.style.display = "block";
+}
+
+btn11.onclick = function() {
+  modal.style.display = "block";
+}
+
+btn12.onclick = function() {
+  modal.style.display = "block";
+}
+
+btn13.onclick = function() {
+  modal.style.display = "block";
+}
+
+btn14.onclick = function() {
+  modal.style.display = "block";
+}
+
+btn15.onclick = function() {
+  modal.style.display = "block";
+}
+
+btn16.onclick = function() {
+  modal.style.display = "block";
+}
+
+btn17.onclick = function() {
+  modal.style.display = "block";
+}
+
+btn18.onclick = function() {
+  modal.style.display = "block";
+}
+
+btn19.onclick = function() {
+  modal.style.display = "block";
+}
+
+btn20.onclick = function() {
+  modal.style.display = "block";
+}
+
+btn21.onclick = function() {
+  modal.style.display = "block";
+}
+
+btn22.onclick = function() {
+  modal.style.display = "block";
+}
+
+btn23.onclick = function() {
+  modal.style.display = "block";
+}
+
+btn24.onclick = function() {
+  modal.style.display = "block";
+}
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+</body>
+</html>
